@@ -1,0 +1,105 @@
+{
+  "package": {
+    "productName": "uonm",
+    "version": "0.1.0"
+  },
+  "build": {
+    "distDir": "../out",
+    "devPath": "http://localhost:3000",
+    "beforeDevCommand": "next dev",
+    "beforeBuildCommand": "next build && next export"
+  },
+  "tauri": {
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "dev.haku.uonm",
+      "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"],
+      "resources": [],
+      "externalBin": [],
+      "copyright": "",
+      "category": "DeveloperTool",
+      "shortDescription": "",
+      "longDescription": "",
+      "deb": {
+        "depends": []
+      },
+      "macOS": {
+        "frameworks": [],
+        "exceptionDomain": "",
+        "signingIdentity": null,
+        "providerShortName": null,
+        "entitlements": null
+      },
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "updater": {
+      "active": false
+    },
+    "allowlist": {
+      "dialog": {
+        "confirm": true,
+        "message": true,
+        "open": true
+      },
+      "shell": {
+        "execute": true,
+        "open": true,
+        "scope": [
+          {
+            "name": "npm",
+            "cmd": "npm",
+            "args": true
+          },
+          {
+            "name": "npm.cmd",
+            "cmd": "npm.cmd",
+            "args": true
+          },
+          {
+            "name": "pnpm",
+            "cmd": "pnpm",
+            "args": true
+          },
+          {
+            "name": "pnpm.cmd",
+            "cmd": "pnpm.cmd",
+            "args": true
+          },
+          {
+            "name": "yarn",
+            "cmd": "yarn",
+            "args": true
+          },
+          {
+            "name": "yarn.cmd",
+            "cmd": "yarn.cmd",
+            "args": true
+          }
+        ]
+      },
+      "clipboard": {
+        "writeText": true
+      }
+    },
+    "windows": [
+      {
+        "title": "uonm",
+        "width": 800,
+        "height": 600,
+        "minWidth": 800,
+        "minHeight": 600,
+        "resizable": true,
+        "fullscreen": false,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  }
+}
